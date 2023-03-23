@@ -1,6 +1,6 @@
 package com.coderscampus.Assignment4new;
 
-public class Student {
+public class Student implements Comparable<Student> {
     private String studentname;
     private String coursename;
     private Integer grade;
@@ -14,7 +14,7 @@ public class Student {
         this.studentname = studentname;
     }
 
-    public String getCoursename( ) {
+    public String getCoursename() {
         return coursename;
     }
 
@@ -22,7 +22,7 @@ public class Student {
         this.coursename = coursename;
     }
 
-    public Integer getGrade( ) {
+    public Integer getGrade() {
         return grade;
     }
 
@@ -30,7 +30,7 @@ public class Student {
         this.grade = grade;
     }
 
-    public Integer getStudentId( ) {
+    public Integer getStudentId() {
         return studentId;
     }
 
@@ -39,8 +39,24 @@ public class Student {
     }
 
     public String toString() {
-        return "Student name is " +  studentname + "their course name is" + coursename
+        return "Student name is " + studentname + "their course name is" + coursename
                 + "with grade " + grade + "and their student ID" + studentId;
+    }
+
+    @Override
+    public int compareTo(Student grade) {
+//        if(this.grade.compareTo(grade.grade) == 0){
+//            return 0;
+//        }else {
+//            return this.grade.compareTo(grade.grade);
+//        }
+        if (this.grade > grade.grade) {
+            return -1;
+        } else if (this.grade.equals(grade.grade)) {
+            return 0;
+        } else {
+            return 1;
+        }
     }
 }
 

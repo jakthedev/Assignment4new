@@ -36,36 +36,42 @@ public class StudentService {
     {
         Student[] cleanedCompSci = Arrays.stream(compSci).filter(Objects::nonNull).toArray(Student[]::new);
 
-        List<Student> finalCleanedCompSci = Arrays.stream(cleanedCompSci).collect(Collectors.toList());
+        Arrays.sort(cleanedCompSci);
+        //List<Student> finalCleanedCompSci = Arrays.stream(cleanedCompSci).collect(Collectors.toList());
 
-        finalCleanedCompSci.sort((o2, o1) -> o1.getGrade().compareTo(o2.getGrade()));
+        //finalCleanedCompSci.sort((o2, o1) -> o1.getGrade().compareTo(o2.getGrade()));
 
-        Student[] finalCleanedCompSciArray = finalCleanedCompSci.toArray(new Student[0]);
-        return finalCleanedCompSciArray;
+        //Student[] finalCleanedCompSciArray = finalCleanedCompSci.toArray(new Student[0]);
+        return cleanedCompSci;
+        //return finalCleanedCompSciArray;
     }
 
     public Student[] statSort(Student[] stat)
     {
         Student[] cleanedStat = Arrays.stream(stat).filter(Objects::nonNull).toArray(Student[]::new);
 
-        List<Student> finalCleanedStat = Arrays.stream(cleanedStat).collect(Collectors.toList());
+        Arrays.sort(cleanedStat);
+        //List<Student> finalCleanedStat = Arrays.stream(cleanedStat).collect(Collectors.toList());
 
-        finalCleanedStat.sort((o2, o1) -> o1.getGrade().compareTo(o2.getGrade()));
+        //finalCleanedStat.sort((o2, o1) -> o1.getGrade().compareTo(o2.getGrade()));
 
-        Student[] finalCleanedStatArray = finalCleanedStat.toArray(new Student[0]);
-        return finalCleanedStatArray;
+        //Student[] finalCleanedStatArray = finalCleanedStat.toArray(new Student[0]);
+        //return finalCleanedStatArray;
+        return cleanedStat;
     }
 
     public Student[] apmthSort(Student[] apmth)
     {
         Student[] cleanedApmth = Arrays.stream(apmth).filter(Objects::nonNull).toArray(Student[]::new);
 
-        List<Student> finalCleanedApmth = Arrays.stream(cleanedApmth).collect(Collectors.toList());
+        Arrays.sort(cleanedApmth);
+        //List<Student> finalCleanedApmth = Arrays.stream(cleanedApmth).collect(Collectors.toList());
 
-        finalCleanedApmth.sort((o2, o1) -> o1.getGrade().compareTo(o2.getGrade()));
+        //finalCleanedApmth.sort((o2, o1) -> o1.getGrade().compareTo(o2.getGrade()));
 
-        Student[] finalCleanedApmthArray = finalCleanedApmth.toArray(new Student[0]);
-        return finalCleanedApmthArray;
+        //Student[] finalCleanedApmthArray = finalCleanedApmth.toArray(new Student[0]);
+        //return finalCleanedApmthArray;
+        return cleanedApmth;
     }
 
 }
